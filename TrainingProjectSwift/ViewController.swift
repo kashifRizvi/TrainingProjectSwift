@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var buttonOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.buttonOutlet.layer.cornerRadius=10
+        self.buttonOutlet.layer.shadowRadius=4
+        self.buttonOutlet.layer.shadowOpacity=1
+        self.buttonOutlet.layer.shadowOffset=CGSize(width: 0.0, height: 0.0)
+        
     }
 
     override func didReceiveMemoryWarning() {

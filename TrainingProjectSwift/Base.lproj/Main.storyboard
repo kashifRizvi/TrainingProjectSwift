@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrainingProjectSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,189 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGk-SJ-59E">
+                                <frame key="frameInset" minX="138" minY="318" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0043884313671037995" green="0.0059488125104085509" blue="0.013722474093264214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.059129870522439822" green="0.62846645016698621" blue="0.97540884067357514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Click Me!">
+                                    <color key="titleColor" red="0.8728483790027739" green="0.9258451318297598" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5YS-pe-L9F" kind="show" id="7zK-2F-7Oz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonOutlet" destination="NGk-SJ-59E" id="3BO-HG-fN6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="154" y="105"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="d7y-Vk-hDc">
+            <objects>
+                <viewController id="5YS-pe-L9F" customClass="MainViewController" customModule="TrainingProjectSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fNy-cX-zKr"/>
+                        <viewControllerLayoutGuide type="bottom" id="L8r-rX-8os"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WpT-A8-K4u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drag Me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7a-ER-yLM">
+                                <frame key="frameInset" minX="16" minY="105" width="141" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42902323270946979" green="0.66120359821605834" blue="0.75032383419689119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.10341771267978554" green="5.8162098538765516e-05" blue="0.12099460659898476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.7436683914375547" green="0.78119051395939088" blue="0.75879034717407401" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Dgp-jn-kDZ" appends="YES" id="Wka-NI-i8V"/>
+                                </connections>
+                            </label>
+                            <imageView hidden="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appleLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="vmH-BG-hPa">
+                                <frame key="frameInset" minX="164" minY="401" width="183" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Co8-Dq-EnD" appends="YES" id="Hna-uV-9zY"/>
+                                    <outletCollection property="gestureRecognizers" destination="AFM-9u-PfU" appends="YES" id="hBd-bn-kqP"/>
+                                </connections>
+                            </imageView>
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acA-DC-ECw">
+                                <frame key="frameInset" minX="16" minY="20" width="331" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlerAction:" destination="5YS-pe-L9F" eventType="valueChanged" id="G3g-nd-kcr"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter text and press 'Return' key.." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nxZ-mG-sW2">
+                                <frame key="frameInset" minX="64" minY="67" width="266" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5YS-pe-L9F" id="q2Q-zf-3vX"/>
+                                </connections>
+                            </textField>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rb3-d1-bt8">
+                                <frame key="frameInset" minX="40" minY="450" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchAction:" destination="5YS-pe-L9F" eventType="valueChanged" id="zLP-yp-pBa"/>
+                                </connections>
+                            </switch>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m4L-ZZ-8FI">
+                                <frame key="frameInset" minX="115" minY="609" width="232" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="X9m-0J-Tx3">
+                                <frame key="frameInset" minX="113" minY="549" width="236" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="5YS-pe-L9F" eventType="valueChanged" id="vqO-hG-9wD"/>
+                                    <action selector="sliderStopAction:" destination="5YS-pe-L9F" eventType="touchUpInside" id="6re-VG-5f5"/>
+                                    <action selector="sliderStopAction:" destination="5YS-pe-L9F" eventType="touchDragOutside" id="ViJ-h9-JB6"/>
+                                </connections>
+                            </slider>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEp-KX-303">
+                                <frame key="frameInset" minX="16" minY="553" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87530819190784326" green="0.89055520881292727" blue="0.89969004755434778" alpha="0.47729675751879697" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LpL-9M-3Cx">
+                                <frame key="frameInset" minX="60" minY="193" width="243" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68200044138052218" green="0.70132556289667203" blue="0.82148012907608692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JB6-nY-4Y4" appends="YES" id="uhv-ah-djx"/>
+                                </connections>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB0-G7-9QP">
+                                <frame key="frameInset" minX="228" minY="105" width="131" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11175757385647102" green="0.78103188451776651" blue="0.11272033750590425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Long Press!!">
+                                    <color key="titleColor" red="0.46439995130234157" green="0.0099513731374273381" blue="0.51963039340101524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fkJ-EE-HEl" appends="YES" id="WwC-dv-kwk"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tH7-ir-klx">
+                                <frame key="frameInset" minX="43" minY="592" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.4102306376133763" green="0.66174323618813724" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorOutlet" destination="tH7-ir-klx" id="Z1f-X5-TTc"/>
+                        <outlet property="buttonOutlet" destination="AB0-G7-9QP" id="zzg-5L-t83"/>
+                        <outlet property="imageViewOutlet" destination="vmH-BG-hPa" id="ex2-0d-A82"/>
+                        <outlet property="labelOutlet" destination="q7a-ER-yLM" id="zTy-g7-PJY"/>
+                        <outlet property="progressViewOutlet" destination="m4L-ZZ-8FI" id="keh-sa-Dg6"/>
+                        <outlet property="segmentedControlOutlet" destination="acA-DC-ECw" id="WIT-wW-dO7"/>
+                        <outlet property="sliderLabelOutlet" destination="wEp-KX-303" id="ocd-5k-chT"/>
+                        <outlet property="sliderOutlet" destination="X9m-0J-Tx3" id="SXc-Fw-Mqw"/>
+                        <outlet property="switchOutlet" destination="Rb3-d1-bt8" id="wYx-gP-FGW"/>
+                        <outlet property="textFieldOutlet" destination="nxZ-mG-sW2" id="0Vq-us-Ykz"/>
+                        <outlet property="viewOutlet" destination="LpL-9M-3Cx" id="xkF-I7-sS1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27B-WM-oeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="fkJ-EE-HEl">
+                    <connections>
+                        <action selector="longPressGestureWithSender:" destination="5YS-pe-L9F" id="OMt-rS-XAm"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Dgp-jn-kDZ">
+                    <connections>
+                        <action selector="dragLabelGesture:" destination="5YS-pe-L9F" id="eqb-LV-qh6"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="Co8-Dq-EnD">
+                    <connections>
+                        <action selector="tapGestureImageView:" destination="5YS-pe-L9F" id="imS-Fl-kmU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="AFM-9u-PfU">
+                    <connections>
+                        <action selector="tapGestureTwoFingerImageview:" destination="5YS-pe-L9F" id="9MS-Vr-NFh"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="JB6-nY-4Y4">
+                    <connections>
+                        <action selector="pinchGestureView:" destination="5YS-pe-L9F" id="nVp-5E-GJb"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="104.7976011994003"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appleLogo.png" width="2000" height="2000"/>
+    </resources>
 </document>
